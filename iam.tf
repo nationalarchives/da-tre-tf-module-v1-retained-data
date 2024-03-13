@@ -21,7 +21,7 @@ data "aws_iam_policy_document" "v1_retained_data_bucket" {
     ]
     principals {
       type        = "Service"
-      identifiers = "logs.eu-west-2.amazonaws.com"
+      identifiers = ["logs.eu-west-2.amazonaws.com"]
     }
     resources = [aws_s3_bucket.v1_retained_data.arn]
     condition {
@@ -42,7 +42,7 @@ data "aws_iam_policy_document" "v1_retained_data_bucket" {
     ]
     principals {
       type        = "Service"
-      identifiers = "logs.eu-west-2.amazonaws.com"
+      identifiers = ["logs.eu-west-2.amazonaws.com"]
     }
     resources = ["${aws_s3_bucket.v1_retained_data.arn}/*"]
     condition {
