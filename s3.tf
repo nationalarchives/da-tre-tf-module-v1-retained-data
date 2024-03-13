@@ -11,7 +11,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "v1_retained_data"
   bucket = aws_s3_bucket.v1_retained_data.id
   rule {
     apply_server_side_encryption_by_default {
-      kms_master_key_id = module.v1_retained_data_bucket_kms_key.kms_key_alias
+      kms_master_key_id = module.v1_retained_data_bucket_kms_key.kms_key_arn
       sse_algorithm = "aws:kms"
     }
   }
