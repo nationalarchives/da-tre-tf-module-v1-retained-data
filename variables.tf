@@ -22,3 +22,8 @@ variable "kms_key_administration_role" {
   description = "Role to administer kms keys"
   type        = string
 }
+
+variable "account_id" {
+  description = "Account ID for logs being copied in"
+  type        = string
+}
